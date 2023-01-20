@@ -27,6 +27,7 @@ function redirectToRoomName(name){
     localStorage.setItem("roomName", name)
     window.location = "kwitterPage.html"
 };
+
 function getData() {  firebase.database().ref("/").on('value', function(snapshot) { document.getElementById("output").innerHTML = ""; snapshot.forEach(function(childSnapshot) { childKey  = childSnapshot.key;
        roomNames = childKey;
        console.log("Nome da Sala - " + roomNames);
